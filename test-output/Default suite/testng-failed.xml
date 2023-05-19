@@ -5,9 +5,15 @@
     <classes>
       <class name="SmartBuy_Test_Project">
         <methods>
+          <include name="FindStoreButton"/>
+          <include name="Sign_Up_Button"/>
           <include name="aftertest"/>
           <include name="before_test"/>
+          <include name="ScreenShot"/>
+          <include name="AddToCart"/>
           <include name="CheackOut"/>
+          <include name="Login_Button"/>
+          <include name="random_search"/>
         </methods>
       </class> <!-- SmartBuy_Test_Project -->
     </classes>

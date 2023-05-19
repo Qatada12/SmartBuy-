@@ -33,8 +33,6 @@ public class SmartBuy_Test_Project extends Parameters_SamrtBuy_Final_Test_Projec
 		driver.manage().window().maximize();
 	}
 
-	
-
 	@Test(priority = 1)
 	public void Sign_Up_Button() throws InterruptedException {
 
@@ -76,8 +74,6 @@ public class SmartBuy_Test_Project extends Parameters_SamrtBuy_Final_Test_Projec
 		int randomlypassworad = genaratepassworad.nextInt(1000);
 		Passwoard34 = "&&" + randomlypassworad + "asd";
 		password.sendKeys(Passwoard34);
-
-		System.out.println(password);
 		WebElement confirm_passowrd = driver.findElement(By.xpath("//*[@id=\"register.checkPwd\"]"));
 
 		confirm_passowrd.sendKeys("&&" + randomlypassworad + "asd");
@@ -141,56 +137,6 @@ public class SmartBuy_Test_Project extends Parameters_SamrtBuy_Final_Test_Projec
 	}
 
 	@Test(priority = 2)
-	public void Login_Button() throws InterruptedException {
-		WebElement user_button = driver
-				.findElement(By.xpath("/html/body/main/header/div[4]/div/nav/div/div[3]/div/ul/li[3]/a"));
-
-		user_button.click();
-
-		Thread.sleep(3000);
-
-		WebElement E_container = driver.findElement(By.xpath("//*[@id=\"cboxLoadedContent\"]"));
-
-		E_container.findElement(By.id("j_username")).sendKeys(email8);
-		Thread.sleep(3000);
-		E_container.findElement(By.id("j_password")).sendKeys(Passwoard34);
-		Thread.sleep(3000);
-		E_container.findElement(By.className("btn-primary")).click();
-
-	}
-
-	@Test(priority = 2)
-	public void random_search() throws InterruptedException {
-		Thread.sleep(2000);
-		WebElement Search_Bar = driver.findElement(By.id("js-site-search-input"));
-		Search_Bar.sendKeys(SEARCH[k]);
-		Thread.sleep(2000);
-		Search_Bar.sendKeys(Keys.ENTER);
-	}
-
-	@Test(priority = 3)
-	public void FindStoreButton() throws InterruptedException {
-		Thread.sleep(2000);
-		WebElement findstorebutton = driver.findElement(By.xpath("/html/body/main/header/div[2]/div/div[3]/a"));
-		
-		findstorebutton.click();
-		Thread.sleep(2000);
-		for(int i=0; i<Locations.length;i++) {
-			driver.findElement(By.xpath(Locations[i])).click();
-			List<WebElement> d = driver.findElements(By.xpath("//*[@id=\"storeFinder\"]/div/div[2]/div/div/div[3]/div[2]/div[4]"));
-		for(int p = 0 ;p<d.size();p++) {
-		System.out.println(d.get(p).findElement(By.tagName("dl")).getText());
-		System.out.println(d.get(p).findElement(By.tagName("dd")).getText());
-		System.out.println("---------------------------------------------");
-		}
-	
-		}
-	
-
-	
-		
-	}
-	@Test(priority = 4)
 
 	public void Login_Button() throws InterruptedException {
 
@@ -210,13 +156,42 @@ public class SmartBuy_Test_Project extends Parameters_SamrtBuy_Final_Test_Projec
 		E_container.findElement(By.className("btn-primary")).click();
 	}
 
+	@Test(priority = 3)
+	public void random_search() throws InterruptedException {
+		Thread.sleep(2000);
+		WebElement Search_Bar = driver.findElement(By.id("js-site-search-input"));
+		Search_Bar.sendKeys(SEARCH[k]);
+		Thread.sleep(2000);
+		Search_Bar.sendKeys(Keys.ENTER);
+	}
+
+	@Test(priority = 4)
+	public void FindStoreButton() throws InterruptedException {
+		Thread.sleep(2000);
+		WebElement findstorebutton = driver.findElement(By.xpath("/html/body/main/header/div[2]/div/div[3]/a"));
+
+		findstorebutton.click();
+		Thread.sleep(2000);
+		for (int i = 0; i < Locations.length; i++) {
+			driver.findElement(By.xpath(Locations[i])).click();
+			List<WebElement> d = driver
+					.findElements(By.xpath("//*[@id=\"storeFinder\"]/div/div[2]/div/div/div[3]/div[2]/div[4]"));
+			for (int p = 0; p < d.size(); p++) {
+				System.out.println(d.get(p).findElement(By.tagName("dl")).getText());
+				System.out.println(d.get(p).findElement(By.tagName("dd")).getText());
+				System.out.println("---------------------------------------------");
+			}
+
+		}
+
+	}
+
 	@Test(priority = 5)
 	public void AddToCart() throws InterruptedException {
 		driver.navigate().to("https://smartbuy-me.com/smartbuystore/en/");
 
 		for (int i = 0; i < 4; i++) {
 			int T = rand.nextInt(0, 5);
-			System.out.println(T);
 			Thread.sleep(4000);
 			WebElement Container = driver.findElement(By.xpath(ChartAdd[T]));
 			Thread.sleep(1000);
@@ -242,7 +217,6 @@ public class SmartBuy_Test_Project extends Parameters_SamrtBuy_Final_Test_Projec
 				.findElement(By.xpath("/html/body/main/div[3]/div[1]/div[2]/div[4]/div/div[2]/div/div[1]/div[2]"))
 				.getText();
 		String SubTotal = ExpectedPrice.replace("JOD", "");
-		
 
 		driver.findElement(By.className("btn--continue-checkout")).click();
 		WebElement location = driver.findElement(By.id("address.country"));
@@ -255,9 +229,7 @@ public class SmartBuy_Test_Project extends Parameters_SamrtBuy_Final_Test_Projec
 		Thread.sleep(2000);
 		int locationIndex = rand.nextInt(0, AddressLine.length);
 		LocationContiner.findElement(By.xpath("//*[@id=\"us3-address\"]")).sendKeys(AddressLine[locationIndex]);
-		
-		
-		
+
 		WebElement Country = driver
 				.findElement(By.xpath("//*[@id=\"i18nAddressForm\"]/div[10]/div/div/div/div/button"));
 		Country.sendKeys("Jordan");
@@ -272,14 +244,12 @@ public class SmartBuy_Test_Project extends Parameters_SamrtBuy_Final_Test_Projec
 		WebElement Date = driver.findElement(By.xpath("//*[@id=\"timeSlotForm\"]/div[1]/div[2]/div/label"));
 		Date.click();
 		driver.findElement(By.xpath("//*[@id=\"ui-datepicker-div\"]/table/tbody"));
-		driver.findElement(By.xpath("//*[@id=\"ui-datepicker-div\"]/table/tbody/tr[4]/td[1]")).click();
+		driver.findElement(By.xpath("//*[@id=\"ui-datepicker-div\"]/table/tbody/tr[5]/td[4]")).click();
 		Thread.sleep(2000);
 		String DeliveryPrice = driver
 				.findElement(By.xpath("/html/body/main/div[3]/div[1]/div/div[2]/div[2]/div/div/div/div[2]/span"))
 				.getText();
 		String DeliveryPrice1 = DeliveryPrice.replace("JOD", "");
-
-//		System.out.println("DeliveryPrice="+DeliveryPrice1);
 
 		WebElement Next = driver.findElement(By.id("chooseDeliveryMethod_continue_button"));
 
@@ -296,8 +266,7 @@ public class SmartBuy_Test_Project extends Parameters_SamrtBuy_Final_Test_Projec
 		WebElement Next2 = driver.findElement(By.xpath("//*[@id=\"chooseDeliveryMethod_continue_button\"]"));
 
 		Next2.click();
-		
-		
+
 		String FinalPrice = driver
 
 				.findElement(By.xpath("/html/body/main/div[3]/div[1]/div/div[2]/div[2]/div/div/div/div[3]/span"))
@@ -305,25 +274,22 @@ public class SmartBuy_Test_Project extends Parameters_SamrtBuy_Final_Test_Projec
 				.getText();
 		String FinalPrice1 = FinalPrice.replace("JOD", "");
 
-
 		Delivery_Price = Double.parseDouble(DeliveryPrice1);
-		System.out.println("SubTotal="+SubTotal);
-		Expected_Price = Double.parseDouble(SubTotal)+Delivery_Price;
+		System.out.println("SubTotal=" + SubTotal);
+		Expected_Price = Double.parseDouble(SubTotal) + Delivery_Price;
 		Final_Price = Double.parseDouble(FinalPrice1);
 	}
-	
-	
+
 	@Test(priority = 7)
-	public void Assertion()throws InterruptedException {
-		
-		
-		System.out.println("Expected_Price="+Expected_Price);
-		System.out.println("Delivery_Price="+Delivery_Price);
-		System.out.println("Final_Price="+Final_Price);
+	public void Assertion() throws InterruptedException {
+
+		System.out.println("Expected_Price=" + Expected_Price);
+		System.out.println("Delivery_Price=" + Delivery_Price);
+		System.out.println("Final_Price=" + Final_Price);
 		myAssertion.assertEquals(Final_Price, Expected_Price);
-		
+
 	}
-	
+
 	@Test(priority = 8)
 	public void ScreenShot() throws IOException, InterruptedException {
 		Date date = new Date();
@@ -336,14 +302,13 @@ public class SmartBuy_Test_Project extends Parameters_SamrtBuy_Final_Test_Projec
 		File SrcFile = scrShot.getScreenshotAs(OutputType.FILE);
 		File DestFile = new File(".//" + fixedDate + ".png");
 		FileUtils.copyFile(SrcFile, DestFile);
-	
+
 	}
-	
+
 	@AfterTest()
-		public void aftertest() {
-		
+	public void aftertest() {
+
 		myAssertion.assertAll();
 	}
-	
 
 }

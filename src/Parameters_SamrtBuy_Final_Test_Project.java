@@ -4,8 +4,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.asserts.SoftAssert;
 
 public class Parameters_SamrtBuy_Final_Test_Project {
-	
-	
+
 	SoftAssert myAssertion = new SoftAssert();
 	WebDriver driver = new ChromeDriver();
 	String BasieURL = "https://smartbuy-me.com/smartbuystore/en/";
@@ -71,7 +70,5 @@ public class Parameters_SamrtBuy_Final_Test_Project {
 	int randomly_last_name = rand.nextInt(last_name.length);
 
 	int randomly_gender = rand.nextInt(Gender.length);
-
-//	int numberRAndomly = rand.nextInt(111111111, 999999999);
 
 }
