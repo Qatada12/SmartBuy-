@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="8" passed="8" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-05-19T21:05:51 EEST" name="Default suite" finished-at="2023-05-19T21:07:52 EEST" duration-ms="120817">
+    <groups>
+    </groups>
+    <test started-at="2023-05-19T21:05:51 EEST" name="Default test" finished-at="2023-05-19T21:07:52 EEST" duration-ms="120817">
+      <class name="SmartBuy_Test_Project">
+        <test-method is-config="true" signature="before_test()[pri:0, instance:SmartBuy_Test_Project@155d1021]" started-at="2023-05-19T21:05:51 EEST" name="before_test" finished-at="2023-05-19T21:05:56 EEST" duration-ms="4692" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before_test -->
+        <test-method signature="Sign_Up_Button()[pri:1, instance:SmartBuy_Test_Project@155d1021]" started-at="2023-05-19T21:05:56 EEST" name="Sign_Up_Button" finished-at="2023-05-19T21:06:16 EEST" duration-ms="19946" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Sign_Up_Button -->
+        <test-method signature="Login_Button()[pri:2, instance:SmartBuy_Test_Project@155d1021]" started-at="2023-05-19T21:06:16 EEST" name="Login_Button" finished-at="2023-05-19T21:06:21 EEST" duration-ms="4984" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login_Button -->
+        <test-method signature="random_search()[pri:3, instance:SmartBuy_Test_Project@155d1021]" started-at="2023-05-19T21:06:21 EEST" name="random_search" finished-at="2023-05-19T21:06:27 EEST" duration-ms="5506" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- random_search -->
+        <test-method signature="FindStoreButton()[pri:4, instance:SmartBuy_Test_Project@155d1021]" started-at="2023-05-19T21:06:27 EEST" name="FindStoreButton" finished-at="2023-05-19T21:06:32 EEST" duration-ms="5396" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- FindStoreButton -->
+        <test-method signature="AddToCart()[pri:5, instance:SmartBuy_Test_Project@155d1021]" started-at="2023-05-19T21:06:32 EEST" name="AddToCart" finished-at="2023-05-19T21:07:26 EEST" duration-ms="53514" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AddToCart -->
+        <test-method signature="CheackOut()[pri:6, instance:SmartBuy_Test_Project@155d1021]" started-at="2023-05-19T21:07:26 EEST" name="CheackOut" finished-at="2023-05-19T21:07:50 EEST" duration-ms="24525" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CheackOut -->
+        <test-method signature="Assertion()[pri:7, instance:SmartBuy_Test_Project@155d1021]" started-at="2023-05-19T21:07:50 EEST" name="Assertion" finished-at="2023-05-19T21:07:50 EEST" duration-ms="9" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Assertion -->
+        <test-method signature="ScreenShot()[pri:8, instance:SmartBuy_Test_Project@155d1021]" started-at="2023-05-19T21:07:50 EEST" name="ScreenShot" finished-at="2023-05-19T21:07:52 EEST" duration-ms="2186" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ScreenShot -->
+        <test-method is-config="true" signature="aftertest()[pri:0, instance:SmartBuy_Test_Project@155d1021]" started-at="2023-05-19T21:07:52 EEST" name="aftertest" finished-at="2023-05-19T21:07:52 EEST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- aftertest -->
+      </class> <!-- SmartBuy_Test_Project -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
